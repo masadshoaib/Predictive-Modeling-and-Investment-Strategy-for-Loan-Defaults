@@ -7,13 +7,16 @@ The LendingClub loan data is from 2007-2018 and sourced from Kaggle.
 
 ## Investment Strategies
 a. Random (Rand): randomly picking loans to invest in
+
 b. Default-based (Def): using best performing model; particularly, sorting
 loans by their estimated Default likelihood, and selecting the ones with the lowest
 likelihood to invest in.
+
 c. Return-based (Ret): training a simple regression model (e.g., linear, random forest,
 NN regressor) to predict the (calculated) return on historical loans directly. Then,
 sorting out-of-sample loans by their predicted returns and selecting the loans with the
 highest predicted returns to invest in.
+
 d. Default-& Return-based (DefRet): training two additional models: one to predict
 the return on loans that did not default, and another to predict the return on loans
 that did default. Then, using the likelihood of Default predicted by best performing model
